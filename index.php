@@ -7,7 +7,7 @@ try {
     
     $data = $gapi->thesportDb();
     
-   echo $data;
+    echo $data;
 
 }
 catch(Exception $e) {
