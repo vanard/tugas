@@ -17,7 +17,7 @@ catch(Exception $e) {
     exit();
 }
 }else{
-    echo "set parameter nya aa"
+    echo "set parameter nya aa";
 }
 
 ?>
