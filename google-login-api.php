@@ -43,8 +43,7 @@ class GoogleLoginApi
 		curl_setopt($ch, CURLOPT_URL, $url);		
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-		$data = json_encode(curl_exec($ch), true);
-		$data = json_decode($data);
+		$data = curl_exec($ch);
 
 		$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);		
 		if($http_code != 200) 
