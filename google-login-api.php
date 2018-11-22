@@ -181,7 +181,7 @@ class GoogleLoginApi
 	
 	public function getFavNews($team)
 	{
-		$url = "https://newsapi.org/v2/everything?q=$team&domains=worldsoccertalk.com,goal.com,101greatgoals.com,espn.go.com,fox-sports.com&sortBy=publishedAt&apiKey=05beb9d0423547c9bae58dad1978c282";
+		$url = "https://newsapi.org/v2/everything?q=$team&domains=worldsoccertalk.com,goal.com,101greatgoals.com,espn.go.com,fox-sports.com&sortBy=relevancy&apiKey=05beb9d0423547c9bae58dad1978c282";
 
 		$ch = curl_init();		
 		curl_setopt($ch, CURLOPT_URL, $url);		
