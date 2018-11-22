@@ -131,8 +131,8 @@ class GoogleLoginApi
 		return $data;
 	}
 
-	public function searchAllTeam($id){
-		$url = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=$id";
+	public function searchAllTeam($nameTeam){
+		$url = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=$nameTeam";
 
 		$ch = curl_init();		
 		curl_setopt($ch, CURLOPT_URL, $url);		
