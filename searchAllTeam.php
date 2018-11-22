@@ -3,11 +3,11 @@
 require_once('google-login-api.php');
 
 if(isset($_GET['l'])){
-    $id = $_GET['l'];
+    $name = $_GET['l'];
 try {
     $gapi = new GoogleLoginApi();
     
-    $data = $gapi->searchAllTeam($id);
+    $data = $gapi->searchAllTeam($name);
     
     echo $data;
 
