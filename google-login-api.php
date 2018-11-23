@@ -195,6 +195,23 @@ class GoogleLoginApi
 			
 		return $data;
 	}
+	
+	public function getHotNews()
+	{
+		$url = "https://newsapi.org/v2/everything?domains=worldsoccertalk.com,goal.com,101greatgoals.com&sortBy=popularity&apiKey=05beb9d0423547c9bae58dad1978c282";
+
+		$ch = curl_init();		
+		curl_setopt($ch, CURLOPT_URL, $url);		
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		$data = curl_exec($ch);
+
+		$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);		
+		if($http_code != 200) 
+			throw new Exception('Error : Failed to get user information');
+			
+		return $data;
+	}
 
 }
 
